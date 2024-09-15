@@ -37,6 +37,9 @@ user: {question}
 assistant:`;
 
 
+
+
+
 export async function POST(req: Request) {
     try {
         // Extract the `messages` from the body of the request

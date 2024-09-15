@@ -48,6 +48,7 @@ export async function POST(req: Request) {
        * Chat models stream message chunks rather than bytes, so this
        * output parser handles serialization and encoding.
        */
+      
         const parser = new HttpResponseOutputParser();
 
         const chain = prompt.pipe(model.bind({ stop: ["?"] })).pipe(parser);
